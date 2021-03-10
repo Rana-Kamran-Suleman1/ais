@@ -1,0 +1,8 @@
+# GET http://localhost:8000/api/approved/ HTTP/1.1
+# Authorization: Basic c0d3:testing123
+
+
+
+
+POST  http://localhost:8000/rundown/rundown-create-api/?pool_title=sfd&pool_time=1&articles=67 HTTP/1.1
+Authorization: Basic c0d3:testing123

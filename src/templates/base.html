@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Page title -->
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>News Desk</title>
+    {% endif %}
+
+    {% block stylesheets %}
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="{% static 'homer/vendor/ionicons/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'fonts/nafees/fonts.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/Nafees-Nastaleeq/css/font.css'%}">
+    <link rel="stylesheet" href="{% static 'homer/vendor/metisMenu/dist/metisMenu.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/vendor/animate.css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/vendor/select/bootstrap-select.css'%}">
+    <link rel="stylesheet" href="{% static 'homer/vendor/bootstrap/dist/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/vendor/toastr/toastr.css'%}">
+    <link rel="stylesheet" href="{% static 'homer/vendor/toastr/toastr-custom.css'%}">
+    <link rel="stylesheet" href="{% static 'homer/vendor/datepicker/dist/css/bootstrap-datepicker3.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/vendor/wave/waves.css' %}">
+    <link rel="stylesheet" href="{% static 'homer/vendor/blueimp-gallery/css/blueimp-gallery.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/fonts/pe-icon-7-stroke/css/helper.css' %}" />
+    <!-- App styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/table1.css'%}">
+    <link rel="stylesheet" href="{% static 'homer/styles/style.css' %}">
+    {% endblock stylesheets %}
+</head>
+
+<body class="fixed-navbar fixed-small-header sidebar-scroll">
+    <!-- Simple splash screen-->
+    <div class="splash">
+        <div class="color-line"></div>
+        <div class="splash-title">
+            <h1>News Desk</h1>
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    {% block header %}
+    {% include 'header.html' %}
+    {% endblock %}
+
+    <!-- Navigation -->
+    {% block aside %}
+    {% include 'aside.html' %}
+    {% endblock %}
+
+    <!-- Main Wrapper -->
+    <div id="wrapper">
+        <div class="normalheader small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <a class="small-header-action" href="#">
+                        <div class="clip-header">
+                            <i class="fa fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+
+                    <h2 class="font-light m-b-xs">
+                        Home view
+                    </h2>
+                    <small>Use search view to show search functionality.</small>
+                </div>
+            </div>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </div>
+    {% block script %}
+    <!-- Vendor scripts -->
+    <script src="{% static 'homer/vendor/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/slimScroll/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/metisMenu/dist/metisMenu.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/iCheck/icheck.min.js '%}"></script>
+    <script src="{% static 'homer/vendor/sparkline/index.js' %}"></script>
+    <script src="{% static 'homer/vendor/toastr/toastr.js '%}"></script>
+    <script src="{% static 'homer/vendor/datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/select/bootstrap-select.js' %}"></script>
+    <script src="{% static 'js/jquery.bootstrap.modal.forms.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/wave/waves.js' %}"></script>
+    <script src="/static/homer/vendor/blueimp-gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="{% static 'homer/vendor/afterglow/afterglow.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/sweet-alert/sweet-alert.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/jquery-validation/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/momentjs/moment.min.js' %}"></script>
+    <!-- App scripts -->
+    <script src="{% static 'homer/scripts/homer.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% if messages %}
+    {% for message in messages %}
+    <script>
+        toastr.options = {
+            "debug": false,
+            "newestOnTop": false,
+            "positionClass": "toast-bottom-right",
+            "toastClass": "animated fadeInDown",
+            "hideDuration": "3000",
+            "timeOut": "3000",
+            "extendedTimeOut": "3000",
+        };
+        toastr.{ { message.tags } } ('{{ message }}');
+    </script>
+    {% endfor %}
+    {% endif %}
+
+    {% endblock script %}
+
+    {% block extrascripts %}{% endblock extrascripts %}
+</body>
+
+</html>

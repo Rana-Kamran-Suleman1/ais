@@ -1,0 +1,136 @@
+
+table[id^='TABLE'],
+#approvedData {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+}
+
+table.dataTable thead tr th {
+        padding: 10px;
+    }
+
+table.dataTable thead th  {
+    border: 0;
+    color: #4f4f4f;
+    font-size: 13px;
+}
+
+table.dataTable thead tr  {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    border: 0;
+}
+
+table.dataTable thead th:last-of-type {
+    padding-right: 20px;
+    text-align: center;
+}
+
+table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after {
+    display: none;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after {
+    display: none;
+}
+
+table.dataTable tbody tr {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+table.dataTable tbody tr td:first-of-type {
+    padding-left: 20px;
+}
+
+
+table.dataTable tbody tr td:last-of-type {
+    padding-right: 20px;
+    text-align: center;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border: 0;
+    color: #4f4f4f;
+}
+
+
+table.dataTable tbody tr:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+    .table-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .table-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        opacity: 0.85;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+    .table-btn:last-child {
+        margin-right: 0;
+    }
+
+    .table-btn:hover {
+        opacity: 1;
+    }
+
+    .table-btn--delete {
+        background-color: #fff;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+
+    }
+
+    .table-btn--edit {
+        background-color: #fff;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+
+    }
+
+    .table-btn--delete:focus,
+    .table-btn--delete:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    .table-btn--edit:focus,
+    .table-btn--edit:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    }
+/* datatable reodered */
+table.dt-rowReorder-float{
+    position:absolute !important;
+    opacity:0.5;
+    table-layout:fixed;
+    outline:1px solid #888;
+    outline-offset:-2px;
+    z-index:2001
+}
+
+tr.dt-rowReorder-moving{
+    outline:0;
+    outline-offset:-2px
+}
+
+body.dt-rowReorder-noOverflow{
+    overflow-x:hidden
+}
+
+table.dataTable td.reorder{
+    text-align:center;
+    cursor:move
+}

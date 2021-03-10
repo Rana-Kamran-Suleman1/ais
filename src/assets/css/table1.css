@@ -1,0 +1,91 @@
+#newsTable {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+#newsTable thead tr {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+#newsTable thead th {
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+    padding-left: 20px !important;
+}
+#newsTable thead th:last-of-type {
+    padding-right: 20px;
+    text-align: center;
+}
+#newsTable tbody tr th {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+    text-align: left;
+}
+#newsTable tbody td {
+    background-color: #FFFFFF;
+    color: #4f4f4f;
+    padding-bottom: 13px !important;
+    padding-top: 13px !important;
+    padding-left: 20px !important;
+    border: none !important;
+}
+#newsTable tbody tr {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+#newsTable tbody tr:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+.table-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.table-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    font-size: 15px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.table-btn:last-child {
+    margin-right: 0;
+}
+.table-btn:hover {
+    opacity: 1;
+}
+.table-btn--delete {
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+.table-btn--edit {
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+.table-btn--delete:focus,
+.table-btn--delete:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+.table-btn--edit:focus,
+.table-btn--edit:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+/* .pagination */
+.pagination [aria-label="Previous"]:hover {
+    background: #62cb31;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.pagination [aria-label="Next"]:hover {
+    background: #62cb31;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#newsTable tbody .selected td {
+       background-color: #d2ffd9 !important;
+}

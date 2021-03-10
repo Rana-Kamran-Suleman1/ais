@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'homer/vendor/metisMenu/dist/metisMenu.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/vendor/animate.css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/vendor/bootstrap/dist/css/bootstrap.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'homer/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}" />
+    <link rel="stylesheet" href="{% static 'homer/fonts/pe-icon-7-stroke/css/helper.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'homer/styles/style.css' %}">
+
+    <style>
+        *,
+        input:focus,
+        button:focus {
+            outline: none;
+        }
+    </style>
+    <title>login</title>
+</head>
+
+<body class="blank">
+
+    <!-- Simple splash screen-->
+    <div class="splash">
+        <div class="color-line"></div>
+        <div class="splash-title">
+            <h1>News Desk</h1>
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-line"></div>
+    <div class="login-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center m-b-md">
+                    <img src="{% static 'img/channel-logo.jpeg' %}" alt="" width="20%">
+                    <h3>PLEASE LOGIN TO News Desk</h3>
+                </div>
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <form method="POST" id="loginForm">{% csrf_token %}
+                            <div class="form-group">
+                                <label class="control-label" for="username">Username</label>
+                                <input class="form-control" autocomplete="username" type="text" name="username" required
+                                    id="id_username" placeholder="username">
+                                <span class="help-block small">Your unique username to app</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="password">Password</label>
+                                <input class="form-control" autocomplete="new-password" type="password" name="password"
+                                    required id="id_password" placeholder="********">
+                                <span class="help-block small">Your strong password</span>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <strong>ChANNEL</strong> - five pakistan<br /> 2020 Copyright
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'homer/vendor/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/slimScroll/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/iCheck/icheck.min.js' %}"></script>
+    <script src="{% static 'homer/vendor/sparkline/index.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{
+    "python.pythonPath": "./env/bin/python",
+    "editor.formatOnSave": true,
+    "editor.formatOnPast": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintPath": "./env/bin/python",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--errors-only"
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "python.linting.pylintEnabled": true,
+    "python.venvPath": "./env/bin/python",
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E501"
+    ],
+    "files.exclude": {
+        "**/.pyc": true,
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": [
+        "--verbose"
+    ],
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "git.ignoreLimitWarning": true,
+    "path-intellisense.mappings": {
+        "/": "${workspaceRoot}",
+        "lib": "./env/lib",
+    },
+    "editor.snippetSuggestions": "bottom",
+    "editor.tabCompletion": "on",
+}

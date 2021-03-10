@@ -1,0 +1,75 @@
+   
+/* 
+    * Waves v0.7.6
+ * http://fian.my.id/Waves 
+ * 
+ * Copyright 2014-2018 Alfiana E. Sibuea and other contributors 
+ * Released under the MIT license 
+ * https://github.com/fians/Waves/blob/master/LICENSE */
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.waves-effect .waves-ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.6);
+    background: radial-gradient(rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 70%);
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transform: scale(0) translate(0, 0);
+    transform: scale(0) translate(0, 0);
+    pointer-events: none;
+}
+.waves-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+.waves-themed.btn-default .waves-ripple,
+.waves-themed.btn-outline-default .waves-ripple,
+.waves-themed.btn-warning .waves-ripple {
+    background: rgba(0, 0, 0, 0.6);
+    background: radial-gradient(rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 70%);
+}
+.waves-themed.btn-danger .waves-ripple,
+.waves-themed.btn-dark .waves-ripple,
+.waves-themed.btn-info .waves-ripple,
+.waves-themed.btn-outline-danger .waves-ripple,
+.waves-themed.btn-outline-dark .waves-ripple,
+.waves-themed.btn-outline-info .waves-ripple,
+.waves-themed.btn-outline-primary .waves-ripple,
+.waves-themed.btn-outline-success .waves-ripple,
+.waves-themed.btn-primary .waves-ripple,
+.waves-themed.btn-success .waves-ripple {
+    background: rgba(255, 255, 255, 0.6);
+    background: radial-gradient(rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 70%);
+}
+.page-sidebar .primary-nav .nav-menu li a.waves-themed .waves-ripple {
+    background: rgba(39, 28, 55, 0.6);
+    background: radial-gradient(rgba(39, 28, 55, 0.2) 0, rgba(39, 28, 55, 0.3) 40%, rgba(39, 28, 55, 0.4) 50%, rgba(39, 28, 55, 0.5) 60%, rgba(39, 28, 55, 0) 70%);
+}
+.panel-hdr:not([class^="bg-"]):not([class*=" bg-"]) .waves-themed.btn-toolbar-master .waves-ripple,
+.waves-themed.nav-link .waves-ripple {
+    background: rgba(136, 106, 181, 0.6);
+    background: radial-gradient(rgba(136, 106, 181, 0.2) 0, rgba(136, 106, 181, 0.3) 40%, rgba(136, 106, 181, 0.4) 50%, rgba(136, 106, 181, 0.5) 60%, rgba(136, 106, 181, 0) 70%);
+}
+
+
+

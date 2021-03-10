@@ -1,0 +1,31 @@
+{% extends 'user/login.html' %}
+
+{% block body %}
+<form class="login-form form-group" method="POST">
+    <h1 class="h4 text-center font-weight-normal">Sign in</h1>
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="text" class="form-control" name="username" maxlength="150" id="id_username" autocomplete="nope"
+            placeholder="username" required>
+    </div>
+    <div class="form-group">
+        <input type="email" class="form-control" name="email" id="id_email" autocomplete="nope"
+            placeholder="your@email.com" required>
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password1" id="id_password1" placeholder="password"
+            autocomplete="new-password" required>
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password2" id="id_password2"
+            placeholder="password confirmation" autocomplete="new-password" required>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-block btn-secondary">Register</button>
+    </div>
+    <small class="text-muted">
+        <a class="ml-2" href="{% url 'login' %}">Already have an account?</a>
+    </small>
+</form>
+{% endblock %}
