@@ -20,3 +20,16 @@ class Profile(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+
+
+
+class Customer(models.Model):
+    fname = models.CharField(max_length=40)
+    lname = models.CharField(max_length=20)
+    gmail = models.EmailField(max_length=20)
+    phone= models.IntegerField(max_length=13)
+    address= models.TextField(max_length=30)
+    
+    def __str__(self):
+        return self.fname
